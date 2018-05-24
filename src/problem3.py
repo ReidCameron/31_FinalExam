@@ -102,13 +102,13 @@ def problem3(point, circle1, circle2, window):
     window.render()
 
     line1 = rg.Line(point,circle1.center)
-    line1.color = circle2.fill_color
+    line1.color = circle1.fill_color
     line1.attach_to(window)
     line2 = rg.Line(circle1.center, circle2.center)
-    line2.color = circle2.fill_color
+    line2.color = circle1.fill_color
     line2.attach_to(window)
     line3 = rg.Line(circle2.center, point)
-    line3.color = circle2.fill_color
+    line3.color = circle1.fill_color
     line3.attach_to(window)
     window.render()
 
