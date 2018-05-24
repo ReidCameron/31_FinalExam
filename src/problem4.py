@@ -8,7 +8,7 @@ Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
 
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   In this problem, you will go through the methods of the  Pig  class
 #   that is defined below, one by one, in the order that they appear.
 #   For each method:
@@ -48,19 +48,19 @@ class Pig(object):
         What comes in:  The Pig's weight (in pounds).
         Side effects: Sets instance variables as needed by the other methods.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
         self.weight = weight
 
     def get_weight(self):
         """ Returns this Pig's weight. """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
         return self.weight
 
     def eat(self, pounds_of_slop):
         """
         Increments this Pig's weight by the given pounds_of_slop.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
         self.weight = self.weight + pounds_of_slop
 
     def eat_for_a_year(self):
@@ -73,7 +73,7 @@ class Pig(object):
           -- eat 364 pounds of slop, then
           -- eat 365 pounds of slop.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
         for k in range(365):
             self.eat(1+k)
 
@@ -82,7 +82,7 @@ class Pig(object):
         Returns either this Pig object or the other given Pig object,
         whichever is heavier.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
         if self.weight > other_pig.weight:
             return self
         else:
@@ -93,7 +93,7 @@ class Pig(object):
         Returns a new Pig whose weight is the weight of the heavier
           of this Pig and the other_Pig.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
         return Pig(self.weight + other_pig.weight)
 
 # -----------------------------------------------------------------------------
