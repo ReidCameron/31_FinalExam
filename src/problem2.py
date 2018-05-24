@@ -8,6 +8,7 @@ Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
 
 import time
 import testing_helper
+import math
 
 
 def main():
@@ -19,9 +20,9 @@ def main():
     print()
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
-    run_test_problem2a()
+    # run_test_problem2a()
     # run_test_problem2b()
-    # run_test_problem2c()
+    run_test_problem2c()
 
 
 def is_prime(n):
@@ -259,6 +260,11 @@ def problem2b(sequence):
     # TODO: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    index = 0
+    for k in range(len(sequence)-1):
+        if abs(sequence[k]) > abs(sequence[k+1]):
+            index = k
+    return index
 
 
 def run_test_problem2c():
@@ -402,8 +408,13 @@ def problem2c(x):
     # TODO: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
-
+    k = 0
+    while True:
+        if is_prime(x+k) and is_prime(sum_of_digits(x+k)):
+            number = x+k
+            break
+        k = k + 1
+    return x +k
 ###############################################################################
 # Our tests use the following to print error messages in red.
 # Do NOT change it.  You do NOT have to do anything with it.
