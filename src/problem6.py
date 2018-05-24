@@ -2,8 +2,8 @@
 Final exam, problem 3.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Cameron Reid.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -75,7 +75,7 @@ And this one for n=14:
     :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: Implement and test this function.
+    # DONE: Implement and test this function.
     #          Some tests are already written for you (above).
     ####################################################################
     # IMPORTANT: In solving this problem,
@@ -88,6 +88,27 @@ And this one for n=14:
     #   (and then change the Xs back to spaces).
     # ------------------------------------------------------------------
 
+
+    for k in range(n):
+        line = ''
+        line2 = ''
+        star = ''
+        space = ''
+        for j in range(n-1-k):
+            space = space + ' '
+        for i in range(k+1):
+            ii = i
+            if i >=9:
+                ii = i-10
+            line = line + str(ii+1)
+        for l in range(k+2):
+            star = star + '*'
+        for j in range(n-k):
+            num = n-k-j
+            if num > 9:
+                num = num - 10
+            line2 = line2 + str(num)
+        print(space + line+ ' ' + star + ' ' + line2)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
